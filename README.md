@@ -3,8 +3,18 @@ form-saver
 
 Saves form to localStorage of the browser and next time it offers to select the set of that values to be prefilled.
 
-Usage:
+To save form values on form submit:
+  
+    FormSaver('my-saved-forms','','fill as:');
+    
+The div with id=aa-fs-my-saved-forms must be present and must be inside the form, you want ot save
+Whole form is saved.
 
+If you want to save just some part of the form, add second parameter like this:
+
+     FormSaver('my-saved-forms','.mysubform','fill as:');
+     
+The complete working example with needed jQuery and deserialize plugin. 
 
     <!DOCTYPE html>
     <html lang="cs">
