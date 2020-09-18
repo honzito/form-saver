@@ -1,3 +1,13 @@
+/**
+ *
+ * @source: https://cdn.jsdelivr.net/gh/honzito/form-saver/
+ *
+ * Copyright (C) 2020  Jan Malík
+ *
+ * This file is made available under the same Creative Commons Attribution-ShareAlike
+ * 2.5 license: http://creativecommons.org/licenses/by-sa/2.5/
+ */
+
 function buildSearchesList(searches, searchesList, form, container, text) {
     searchesList.empty();
 
