@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Plain.Sortable text</title>
+    <link rel=stylesheet type="text/css" href="https://cdn.jsdelivr.net/gh/honzito/form-saver/form-saver.css">
+    <script src="sortable.js"></script>
+</head>
+<body>
+
+<form action="/contact" method="post">
+
+    <!-- mandatory div where the options will be presented -->
+    <div class=aa-form-saver id=aa-fs-my-saved-forms></div>
+
+    <p>
+        <label>Title</label><br>
+        <label><input type="radio" name="title" value="mr">Mr</label>
+        <label><input type="radio" name="title" value="mrs">Mrs</label>
+        <label><input type="radio" name="title" value="miss">Miss</label>
+    </p>
+
+    <div> class="mysubform">
+        <p>
+            <label>First name</label><br>
+            <input type="text" name="first_name">
+        </p>
+        <p>
+            <label>Last name</label><br>
+            <input type="text" name="last_name">
+        </p>
+        <p>
+            <label>Email</label><br>
+            <input type="email" name="email" required>
+        </p>
+        <p>
+            <label>Phone number</label><br>
+            <input type="tel" name="phone">
+        </p>
+    </div>
+    <p>
+        <label>Country</label><br>
+        <select>
+            <option>Czech Republic</option>
+            <option>India</option>
+            <option>United States</option>
+            <option>Indonesia</option>
+            <option>Brazil</option>
+        </select>
+    </p>
+    <p>
+        <label>
+            <input type="checkbox" value="terms">
+            I agree to the <a href="/terms">terms and conditions</a>
+        </label>
+    </p>
+    <p>
+        <button>Sign up</button>
+    </p>
+</form>
+
+<!-- jQuery and deserialize is needed -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin=anonymous></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-deserialize@2.0.0-rc1/src/jquery.deserialize.js" integrity="sha256-iQpPGsHQZs7cuArBkNIa6QOJlnnf8A1RBfMLxp/MLVI=" crossorigin=anonymous></script>
+<script src="https://cdn.jsdelivr.net/gh/honzito/form-saver/form-saver.min.js"></script>
+
+<!--
+  Save form values on form submit.
+  The div with id=aa-fs-my-saved-forms must be present and must be inside the form, you want ot save
+  Whole form is saved.
+  If you want to save just some part of the form, add second parameter like this:
+     FormSaver('my-saved-forms','.mysubform','fill as:');
+-->
+<script> FormSaver('my-saved-forms','','fill as:'); </script>
+
+</body>
+</html>
