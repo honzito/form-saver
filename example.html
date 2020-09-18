@@ -2,9 +2,8 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>Plain.Sortable text</title>
+    <title>form-saver</title>
     <link rel=stylesheet type="text/css" href="https://cdn.jsdelivr.net/gh/honzito/form-saver/form-saver.css">
-    <script src="sortable.js"></script>
 </head>
 <body>
 
@@ -20,7 +19,7 @@
         <label><input type="radio" name="title" value="miss">Miss</label>
     </p>
 
-    <div> class="mysubform">
+    <div class="mysubform">
         <p>
             <label>First name</label><br>
             <input type="text" name="first_name">
@@ -40,7 +39,7 @@
     </div>
     <p>
         <label>Country</label><br>
-        <select>
+        <select name="country">
             <option>Czech Republic</option>
             <option>India</option>
             <option>United States</option>
@@ -50,7 +49,7 @@
     </p>
     <p>
         <label>
-            <input type="checkbox" value="terms">
+            <input type="checkbox" value="terms" name="terms">
             I agree to the <a href="/terms">terms and conditions</a>
         </label>
     </p>
